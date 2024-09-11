@@ -4,12 +4,15 @@ createApp ({
     data() {
         return {
             emails: '',
+            apiUrl: "https://flynn.boolean.careers/exercises/api/random/mail",
+        }    
+    },
+    methods: {
+        getEmails() {
+            axios.get(this.apiUrl)
+            .then(function(response) {
+            console.log(response);
+            });
         }
     }
-})
-
-axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
-.then(function(response) {
-    console.log(response);
-    }
-);
+}).mount('#app')
