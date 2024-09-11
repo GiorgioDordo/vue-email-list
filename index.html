@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container" id="app">
-        <ul class="text-center list-unstyled">
-            <li class="fs-3">dsfsdaf</li>
+        <ul v-for="email in emails" class="text-center list-unstyled">
+            <li class="fs-3">{{email}}</li>
         </ul>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
