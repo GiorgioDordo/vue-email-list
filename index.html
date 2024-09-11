@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container" id="app">
-        <ul v-for="email in emails" class="text-center list-unstyled">
+    <div class="text-center">
+        <h1>Generate 10 emails</h1>
+    </div>
+    <div id="app">
+        <div v-if="emailsLength" class="container">
+        <ul v-for="email in emails" :key="email" class="text-center list-unstyled">
             <li class="fs-3">{{email}}</li>
         </ul>
+        </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
